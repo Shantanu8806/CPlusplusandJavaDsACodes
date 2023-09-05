@@ -12,12 +12,8 @@ class Solution {
         
         for(int i=0;i<n;i++)
         {
-                if(!ans.get(edges[i][0]).contains(edges[i][1]) && !ans.get(edges[i][1]).contains(edges[i][0]))
-                {
-                    ans.get(edges[i][0]).add(edges[i][1]);
-                    ans.get(edges[i][1]).add(edges[i][0]);
-                }
-            
+                ans.get(edges[i][0]).add(edges[i][1]);
+                ans.get(edges[i][1]).add(edges[i][0]);
         }
         return ans;
     }
